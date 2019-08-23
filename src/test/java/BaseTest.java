@@ -7,9 +7,9 @@ public class BaseTest {
     public static final String EMAIL_FOR_LOGIN = "emailForQAQA";
     public static final String PASSWORD = "QAQAQAQA123qa";
     public static final String EMAIL_POSTFIX = "@inbox.ru";
-    public static final String LETTER_ADDRESSEE = "someonesorry@mail.ru";
+    public static final String LETTER_ADDRESSEE = "emailForQAQA@inbox.ru";
     public static final String LETTER_THEME = "It is the theme";
-    public static final String LETTER_TEXT = "Text";
+    public static final String LETTER_TEXT = "The letter text";
 
     public static final int WAITING_WEB_ELEMENTS=100;
 
@@ -17,7 +17,7 @@ public class BaseTest {
 
     @BeforeTest
     public void onStart(){
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver2.exe");
         driver = new ChromeDriver();
         driver.get("https://mail.ru");
         driver.manage().window().maximize();

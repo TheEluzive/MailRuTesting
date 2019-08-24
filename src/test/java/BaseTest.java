@@ -1,5 +1,3 @@
-import Model.DataPool;
-import lombok.Data;
 import lombok.Getter;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -27,9 +25,6 @@ public class BaseTest {
 
     private static String mainURL="";
     private Properties property;
-    DataPool dataPool;
-
-
 
 
 

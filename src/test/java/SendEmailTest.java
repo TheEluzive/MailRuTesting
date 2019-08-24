@@ -1,19 +1,10 @@
-import Model.DataPool;
-import Model.Email;
-import Model.User;
 import Pages.EmailPage;
 import Pages.MainPage;
 import Pages.WriteLetterPage;
 import org.testng.Assert;
-import org.testng.ITestContext;
-
-import org.testng.annotations.BeforeSuite;
-
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class SendEmailTest extends BaseTest {
-
 
     @Test
     public void sendEmailTest() {

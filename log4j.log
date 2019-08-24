@@ -96,3 +96,27 @@
 19/08/24 14:52:20 INFO BaseTest: MainURL = https://mail.ru
 19/08/24 14:52:36 INFO BaseTest: Tests started!
 19/08/24 14:52:36 INFO BaseTest: Tests Skipped!
+19/08/24 14:55:00 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:55:12 INFO BaseTest: Tests started!
+19/08/24 14:55:12 DEBUG BaseTest: Call: login.
+19/08/24 14:55:12 DEBUG BaseTest: Call: pressButtonWriteMessage.
+19/08/24 14:55:16 DEBUG BaseTest: Call: sendLetter.
+19/08/24 14:55:23 DEBUG BaseTest: Call: assert.
+19/08/24 14:55:23 INFO BaseTest: Tests successful finish!
+19/08/24 14:55:28 INFO BaseTest: Test finished!
+19/08/24 14:56:02 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:56:14 INFO BaseTest: Tests started!
+19/08/24 14:56:14 DEBUG BaseTest: Call: login.
+19/08/24 14:56:15 DEBUG BaseTest: Call: pressButtonWriteMessage.
+19/08/24 14:56:19 DEBUG BaseTest: Call: sendLetter.
+19/08/24 14:56:26 DEBUG BaseTest: Call: assert.
+19/08/24 14:56:27 INFO BaseTest: Tests successful finish!
+19/08/24 14:56:31 INFO BaseTest: Test finished!
+19/08/24 14:56:45 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:56:57 INFO BaseTest: Tests started!
+19/08/24 14:56:57 DEBUG BaseTest: Call: login.
+19/08/24 14:56:58 DEBUG BaseTest: Call: pressButtonWriteMessage.
+19/08/24 14:57:01 DEBUG BaseTest: Call: sendLetter.
+19/08/24 14:57:05 DEBUG BaseTest: Call: assert.
+19/08/24 14:57:06 INFO BaseTest: Tests successful finish!
+19/08/24 14:57:10 INFO BaseTest: Test finished!

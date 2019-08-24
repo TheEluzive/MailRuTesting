@@ -1,0 +1,98 @@
+19/08/24 10:57:26 ERROR BaseTest: Properties files wasn`t found
+19/08/24 10:59:58 INFO BaseTest: MainURL = https://mail.ru"
+19/08/24 11:00:29 INFO BaseTest: Test started!
+19/08/24 11:00:49 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 11:01:00 INFO BaseTest: Test started!
+19/08/24 11:01:16 INFO BaseTest: Test finished!
+19/08/24 11:02:08 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 11:02:20 INFO BaseTest: Test started!
+19/08/24 11:03:13 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 11:03:27 INFO BaseTest: Test started!
+19/08/24 11:04:10 INFO BaseTest: Test finished!
+19/08/24 11:06:35 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 11:06:47 INFO BaseTest: Test started!
+19/08/24 11:07:27 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 11:07:39 INFO BaseTest: Test started!
+19/08/24 11:07:56 INFO BaseTest: Test finished!
+19/08/24 12:30:11 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 12:30:38 INFO BaseTest: Test finished!
+19/08/24 12:34:22 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 12:34:47 INFO BaseTest: Test finished!
+19/08/24 12:53:58 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 12:54:12 INFO BaseTest: Tests started!
+19/08/24 12:54:12 DEBUG BaseTest: Call: login.
+19/08/24 12:54:13 DEBUG BaseTest: Call: pressButtonWriteMessage.
+19/08/24 12:54:18 DEBUG BaseTest: Call: sendLetter.
+19/08/24 12:54:26 DEBUG BaseTest: Call: assert.
+19/08/24 12:54:27 INFO BaseTest: Tests successful finish!
+19/08/24 12:54:32 INFO BaseTest: Test finished!
+19/08/24 13:32:45 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 13:32:58 INFO BaseTest: Tests Failure!
+19/08/24 13:33:02 INFO BaseTest: Test finished!
+19/08/24 13:33:48 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 13:34:02 INFO BaseTest: Tests Failure!
+19/08/24 13:34:02 INFO BaseTest: Test finished!
+19/08/24 13:35:47 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 13:36:01 INFO BaseTest: Tests Failure!
+19/08/24 13:36:01 INFO BaseTest: Test finished!
+19/08/24 13:37:38 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 13:37:51 INFO BaseTest: Tests Failure!
+19/08/24 13:37:56 INFO BaseTest: Test finished!
+19/08/24 13:38:37 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 13:38:49 INFO BaseTest: Tests Failure!
+19/08/24 13:38:50 INFO BaseTest: Test finished!
+19/08/24 13:41:33 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 13:41:46 INFO BaseTest: Tests Failure!
+19/08/24 13:41:50 INFO BaseTest: Test finished!
+19/08/24 13:54:27 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 13:54:40 INFO BaseTest: Tests Failure!
+19/08/24 13:54:44 INFO BaseTest: Test finished!
+19/08/24 13:55:39 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 13:55:57 INFO BaseTest: Tests Failure!
+19/08/24 13:56:01 INFO BaseTest: Test finished!
+19/08/24 14:01:45 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:01:58 INFO BaseTest: Tests Skipped!
+19/08/24 14:01:58 INFO BaseTest: Test finished!
+19/08/24 14:02:56 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:03:05 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:03:18 INFO BaseTest: Tests Skipped!
+19/08/24 14:03:19 INFO BaseTest: Test finished!
+19/08/24 14:04:49 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:05:02 INFO BaseTest: Tests Skipped!
+19/08/24 14:05:06 INFO BaseTest: Test finished!
+19/08/24 14:07:08 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:07:20 INFO BaseTest: Tests Failure!
+19/08/24 14:07:21 INFO BaseTest: Test finished!
+19/08/24 14:10:12 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:10:24 INFO BaseTest: Tests Failure!
+19/08/24 14:10:29 INFO BaseTest: Test finished!
+19/08/24 14:11:41 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:11:54 INFO BaseTest: Tests Failure!
+19/08/24 14:11:58 INFO BaseTest: Test finished!
+19/08/24 14:13:13 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:13:26 INFO BaseTest: Tests started!
+19/08/24 14:13:26 DEBUG BaseTest: Call: login.
+19/08/24 14:13:27 DEBUG BaseTest: Call: pressButtonWriteMessage.
+19/08/24 14:13:31 DEBUG BaseTest: Call: sendLetter.
+19/08/24 14:13:39 DEBUG BaseTest: Call: assert.
+19/08/24 14:13:40 INFO BaseTest: Tests successful finish!
+19/08/24 14:13:44 INFO BaseTest: Test finished!
+19/08/24 14:47:53 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:48:06 INFO BaseTest: Tests started!
+19/08/24 14:48:06 DEBUG BaseTest: Call: login.
+19/08/24 14:48:07 DEBUG BaseTest: Call: pressButtonWriteMessage.
+19/08/24 14:48:11 DEBUG BaseTest: Call: sendLetter.
+19/08/24 14:48:18 DEBUG BaseTest: Call: assert.
+19/08/24 14:48:19 INFO BaseTest: Tests successful finish!
+19/08/24 14:48:24 INFO BaseTest: Test finished!
+19/08/24 14:48:53 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:49:05 INFO BaseTest: Tests started!
+19/08/24 14:49:05 DEBUG BaseTest: Call: login.
+19/08/24 14:49:06 DEBUG BaseTest: Call: pressButtonWriteMessage.
+19/08/24 14:49:09 DEBUG BaseTest: Call: sendLetter.
+19/08/24 14:49:13 DEBUG BaseTest: Call: assert.
+19/08/24 14:49:14 INFO BaseTest: Tests successful finish!
+19/08/24 14:49:18 INFO BaseTest: Test finished!
+19/08/24 14:52:20 INFO BaseTest: MainURL = https://mail.ru
+19/08/24 14:52:36 INFO BaseTest: Tests started!
+19/08/24 14:52:36 INFO BaseTest: Tests Skipped!

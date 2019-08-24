@@ -23,7 +23,7 @@ public class SendEmailTest extends BaseTest {
     }
 
     @Test(dataProvider = "email")
-    public void sendEmailTest(Email email) {
+    public void sendEmailTest(Email email) { //run from XMLsuites
 
         MainPage mainPage = new MainPage(driver);
         LOGGER.debug("Call: login.");

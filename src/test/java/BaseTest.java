@@ -1,3 +1,4 @@
+import Model.DataPool;
 import lombok.Getter;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -16,12 +17,13 @@ import java.util.Properties;
 @Getter
 public class BaseTest {
 
-    public static final String EMAIL_FOR_LOGIN = "emailForQAQA";
+   /* public static final String EMAIL_FOR_LOGIN = "emailForQAQA";
     public static final String PASSWORD = "QAQAQAQA123qa";
     public static final String EMAIL_POSTFIX = "@inbox.ru";
     public static final String LETTER_ADDRESSEE = "emailForQAQA@inbox.ru";
-    public static final String LETTER_TEXT = "The letter text!";
+    public static final String LETTER_TEXT = "The letter text!";*/
     public static Logger LOGGER;
+    protected DataPool dataPool;
 
     private static String mainURL="";
     private Properties property;
@@ -32,7 +34,7 @@ public class BaseTest {
 
     @BeforeTest
     public void onStart(){
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get(mainURL);
         driver.manage().window().maximize();
@@ -41,7 +43,6 @@ public class BaseTest {
     @AfterTest
     public void onFinish(){
         driver.close();
-        LOGGER.info("Test finished!");
     }
 
 
@@ -49,7 +50,7 @@ public class BaseTest {
 
     @BeforeSuite
     public void beforeSuite() {
-        String log4jConfPath = "src/test/resources/log4j.properties";
+        String log4jConfPath = "src/resources/log4j.properties";
         PropertyConfigurator.configure(log4jConfPath);
         LOGGER = Logger.getLogger(BaseTest.class);
 
@@ -57,7 +58,7 @@ public class BaseTest {
         property = new Properties();
 
         try {
-            fis = new FileInputStream("src/test/resources/config.properties");
+            fis = new FileInputStream("src/resources/config.properties");
             property.load(fis);
             mainURL = property.getProperty("mainURL");
             LOGGER.info("MainURL = " + mainURL);

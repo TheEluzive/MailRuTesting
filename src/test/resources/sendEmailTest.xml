@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SendEmailTest">
+    <test name="SendEmailTest" verbose="2">
+        <parameter name="data" value="src/test/resources/Email.json"/>
+        <classes>
+            <class name="SendEmailTest">
+                <methods>
+                    <include name="sendEmailTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

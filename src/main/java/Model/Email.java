@@ -1,13 +1,11 @@
-package Model;
+package model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-@NoArgsConstructor@Data
+@NoArgsConstructor
+@Data
 public class Email {
     private User user;
     private String addressee;

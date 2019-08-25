@@ -1,29 +1,41 @@
-import Model.DataPool;
-import Model.Email;
-import Pages.EmailPage;
-import Pages.MainPage;
-import Pages.WriteLetterPage;
+import model.Email;
+import org.testng.annotations.Listeners;
+import pages.EmailPage;
+import pages.MainPage;
+import pages.WriteLetterPage;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
 import org.testng.Assert;
-import org.testng.ITestContext;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.List;
+
+@Listeners(Listener.class)
 public class SendEmailTest extends BaseTest {
 
-    @BeforeSuite
-    public void dataPool(ITestContext testContext) {
-        dataPool = new DataPool<>("data", testContext, Email.class);
+
+    @DataProvider
+    public Object[][] getData() throws FileNotFoundException {
+        JsonElement jsonData = new JsonParser().parse(new FileReader("src/test/resources/Email.json"));
+        JsonElement dataSet = jsonData.getAsJsonObject().get("dataSet");
+        List<Email> testData = new Gson().fromJson(dataSet, new TypeToken<List<Email>>() {
+        }.getType());
+        Object[][] returnValue = new Object[testData.size()][1];
+        int index = 0;
+        for (Object[] each : returnValue) {
+            each[0] = testData.get(index++);
+        }
+        return returnValue;
     }
 
-    @DataProvider(name = "email")
-    public Object[] dataProviderNewUserFromJson() {
-        return dataPool.getData();
-    }
 
-    @Test(dataProvider = "email")
-    public void sendEmailTest(Email email) { //run from XMLsuites
+    @Test(dataProvider = "getData")
+    public void sendEmailTest(Email email) {
 
         MainPage mainPage = new MainPage(driver);
         LOGGER.debug("Call: login.");

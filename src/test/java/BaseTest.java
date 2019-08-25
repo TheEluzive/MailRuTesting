@@ -1,4 +1,3 @@
-import Model.DataPool;
 import lombok.Getter;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -17,43 +16,18 @@ import java.util.Properties;
 @Getter
 public class BaseTest {
 
-   /* public static final String EMAIL_FOR_LOGIN = "emailForQAQA";
-    public static final String PASSWORD = "QAQAQAQA123qa";
-    public static final String EMAIL_POSTFIX = "@inbox.ru";
-    public static final String LETTER_ADDRESSEE = "emailForQAQA@inbox.ru";
-    public static final String LETTER_TEXT = "The letter text!";*/
-    public static Logger LOGGER;
-    protected DataPool dataPool;
-
-    private static String mainURL="";
-    private Properties property;
-
-
+    /* public static final String EMAIL_FOR_LOGIN = "emailForQAQA";
+     public static final String PASSWORD = "QAQAQAQA123qa";
+     public static final String EMAIL_POSTFIX = "@inbox.ru";
+     public static final String LETTER_ADDRESSEE = "emailForQAQA@inbox.ru";
+     public static final String LETTER_TEXT = "The letter text!";*/
 
     protected WebDriver driver;
+    public static Logger LOGGER;
+    protected static Properties property = loadProperties();
+    protected static String mainURL = property.getProperty("mainURL");
 
-    @BeforeTest
-    public void onStart(){
-        System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get(mainURL);
-        driver.manage().window().maximize();
-    }
-
-    @AfterTest
-    public void onFinish(){
-        driver.close();
-    }
-
-
-
-
-    @BeforeSuite
-    public void beforeSuite() {
-        String log4jConfPath = "src/resources/log4j.properties";
-        PropertyConfigurator.configure(log4jConfPath);
-        LOGGER = Logger.getLogger(BaseTest.class);
-
+    private static Properties loadProperties() {
         FileInputStream fis;
         property = new Properties();
 
@@ -61,11 +35,34 @@ public class BaseTest {
             fis = new FileInputStream("src/resources/config.properties");
             property.load(fis);
             mainURL = property.getProperty("mainURL");
-            LOGGER.info("MainURL = " + mainURL);
+
 
         } catch (IOException e) {
-            LOGGER.error("Properties files wasn`t found");
+            System.out.println("Properties files wasn`t found");
         }
+        return property;
+    }
+
+
+    @BeforeTest
+    public void onStart() {
+        System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.get(mainURL);
+        driver.manage().window().maximize();
+    }
+
+    @AfterTest
+    public void onFinish() {
+        driver.close();
+    }
+
+
+    @BeforeSuite
+    public void beforeSuite() {
+        String log4jConfPath = "src/resources/log4j.properties";
+        PropertyConfigurator.configure(log4jConfPath);
+        LOGGER = Logger.getLogger(BaseTest.class);
     }
 
 

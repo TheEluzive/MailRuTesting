@@ -1,10 +1,14 @@
 {
-  "user": {
-    "login": "emailForQAQA",
-    "emailPostfix": "@inbox.ru",
-    "password": "QAQAQAQA123qa"
-  },
-  "addressee": "emailForQAQA@inbox.ru",
-  "emailText": "The letter text!"
+  "dataSet":[
+    {
+    "user": {
+      "login": "emailForQAQA",
+      "emailPostfix": "@inbox.ru",
+      "password": "QAQAQAQA123qa"
+    },
+    "addressee": "emailForQAQA@inbox.ru",
+    "emailText": "The letter text!"
+  }
+  ]
 }
 

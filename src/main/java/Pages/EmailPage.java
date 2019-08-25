@@ -1,10 +1,8 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EmailPage extends BasePage{
 
@@ -12,13 +10,18 @@ public class EmailPage extends BasePage{
         super(webDriver);
     }
 
-    @FindBy(xpath = "//*[@id=\"app-canvas\"]/div/div[1]/div[1]/div/div[2]/div[1]/div/div/div[1]/div[1]/div/span/span/span")
+    @FindBy(xpath = "//span[@class='compose-button__wrapper']")
     private WebElement buttonWriteMessage;
 
-    public void pressButtonWriteMessage(WebDriver driver){
-        buttonWriteMessage = (new WebDriverWait(driver, WAITING_WEB_ELEMENTS_IN_SECONDS))
-                .until(ExpectedConditions.elementToBeClickable(buttonWriteMessage));
+    @FindBy(xpath = "//a[@id='PH_logoutLink']")
+    private WebElement buttonLogout;
 
-        buttonWriteMessage.click();
+
+    public void pressButtonWriteMessage(WebDriver driver){
+        waitWebElement(driver,buttonWriteMessage).click();
+    }
+
+    public void pressButtonLogout(WebDriver driver){
+        waitWebElement(driver,buttonLogout).click();
     }
 }

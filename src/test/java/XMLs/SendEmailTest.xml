@@ -3,7 +3,6 @@
 
 <suite name="SendEmailTest">
     <test name="SendEmailTest" verbose="2">
-        <parameter name="data" value="src/test/resources/Email.json"/>
         <classes>
             <class name="SendEmailTest">
                 <methods>

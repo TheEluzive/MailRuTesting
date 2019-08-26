@@ -1,5 +1,6 @@
 import model.Email;
 import org.testng.annotations.Listeners;
+import pages.BasePage;
 import pages.EmailPage;
 import pages.MainPage;
 import pages.WriteLetterPage;
@@ -10,7 +11,6 @@ import com.google.gson.reflect.TypeToken;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.List;
@@ -44,7 +44,10 @@ public class SendEmailTest extends BaseTest {
 
         LOGGER.debug("Call: pressButtonWriteMessage.");
         EmailPage emailPage = new EmailPage(driver);
-        emailPage.pressButtonWriteMessage(driver);
+        BasePage.pressButton(
+                BasePage.waitWebElement(driver, emailPage.getButtonWriteMessage())
+        );
+
 
         LOGGER.debug("Call: sendLetter.");
         WriteLetterPage writeLetterPage = new WriteLetterPage(driver);

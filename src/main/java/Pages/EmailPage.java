@@ -1,9 +1,11 @@
 package pages;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+@Getter
 public class EmailPage extends BasePage{
 
     public EmailPage(WebDriver webDriver) {
@@ -16,12 +18,4 @@ public class EmailPage extends BasePage{
     @FindBy(xpath = "//a[@id='PH_logoutLink']")
     private WebElement buttonLogout;
 
-
-    public void pressButtonWriteMessage(WebDriver driver){
-        waitWebElement(driver,buttonWriteMessage).click();
-    }
-
-    public void pressButtonLogout(WebDriver driver){
-        waitWebElement(driver,buttonLogout).click();
-    }
 }

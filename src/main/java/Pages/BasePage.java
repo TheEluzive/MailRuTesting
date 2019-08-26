@@ -14,27 +14,31 @@ public abstract class BasePage {
         PageFactory.initElements(webDriver, this);
     }
 
-    protected WebElement waitWebElement(WebDriver driver, WebElement webElement){
+    public static WebElement waitWebElement(WebDriver driver, WebElement webElement){
         webElement = (new WebDriverWait(driver, WAITING_WEB_ELEMENTS_IN_SECONDS))
                 .until(ExpectedConditions.elementToBeClickable(webElement));
         return webElement;
     }
 
-    protected void select(WebElement selector, String value){
+    public static void select(WebElement selector, String value){
         Select select = new Select(selector);
         selector.click();
         select.selectByVisibleText(value);
     }
 
-    protected String getLocatorFromWebElement(WebElement element) {
+    public static String getLocatorFromWebElement(WebElement element) {
         return element.toString().split("->")[1].replaceFirst("(?s)(.*)\\]", "$1" + "").substring(8);
     }
 
-    protected void sendKeysByJS(WebDriver driver, WebElement webElement, String text) {
+    public static void sendKeysByJS(WebDriver driver, WebElement webElement, String text) {
         String javaScript = " const elem = document.evaluate('"+ getLocatorFromWebElement(webElement) +
                 "', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null ).singleNodeValue; " +
                 "elem.innerText = '" + text + "' ";
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript(javaScript, webElement);
+    }
+
+    public static void pressButton(WebElement webElement){
+        webElement.click();
     }
 }
